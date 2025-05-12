@@ -1,16 +1,17 @@
 ﻿namespace library.Model
 {
-    public class Post : Publicacao
+    public class Post
     {
-        private protected long Id { get; }
-        private protected long IdUser { get; }
-        protected internal string Author { get; }
-        protected internal string Username { get; }
-        protected internal string Content { get; }
-        protected internal DateTime Date { get; }
+        public long Id { get; set; }
+        public long IdUser { get; set; }
+        public string Author { get; set; }
+        public string Username { get; set; }
+        public string Content { get; set; }
+        public DateTime Date { get; set; }
+
+        public Post() { }
 
         public Post(long id, long idUser, string author, string username, string content, DateTime date)
-            : base(id, idUser, content, date)
         {
             Id = id;
             IdUser = idUser;
@@ -27,7 +28,7 @@
 
         public long GetId() => Id;
 
-        public override void Exibir()
+        public void Exibir()
         {
             Console.WriteLine(this);
         }

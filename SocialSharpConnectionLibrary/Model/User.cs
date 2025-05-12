@@ -4,19 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace library.model
+namespace library.Model
 {
     public class User
     {
-        protected long id { get; }
-        protected string name { get; }
-        protected int age { get; }
-        protected string email { get; }
-        protected string username { get; }
+        public long id { get; set; }
+        public string name { get; set; }
+        public int age { get; set; }
+        public string email { get; set; }
+        public string username { get; set; }
 
-        internal User(string name, int age, string email, string username)
+        public User() { }
+
+        public User(long id, string name, int age, string email, string username)
         {
-            this.id = Random.Shared.NextInt64();
+            this.id = id;
             this.name = name;
             this.age = age;
             this.email = email;
