@@ -43,4 +43,40 @@ git clone https://github.com/seu-usuario/SocialSharpConnection.git
 cd SocialSharpConnection
 ```
 
-Execute o arquivo da solução (.sln) e execute dentro do visual studio ou a ide de sua preferência
+Execute o arquivo da solução (.sln) e execute dentro do visual studio ou a ide de sua preferência.
+
+## 📬 Endpoints da API
+
+Abaixo estão listadas as principais rotas RESTful organizadas por entidade:
+
+### 🔹 Usuários (`/api/User`)
+
+| Método | Rota                | Descrição                              | Corpo da Requisição |
+|--------|---------------------|----------------------------------------|----------------------|
+| GET    | `/api/User`         | Lista todos os usuários                | -                    |
+| GET    | `/api/User/{id}`    | Retorna um usuário por ID              | -                    |
+| POST   | `/api/User`         | Cria um novo usuário                   | `{ name, age, email, username }` |
+| PUT    | `/api/User/{id}`    | Atualiza um usuário existente          | `{ id, name, age, email, username }` |
+| DELETE | `/api/User/{id}`    | Remove um usuário pelo ID              | -                    |
+
+---
+
+### 🔹 Publicações (`/api/Post`)
+
+| Método | Rota                | Descrição                              | Corpo da Requisição |
+|--------|---------------------|----------------------------------------|----------------------|
+| GET    | `/api/Post`         | Lista todas as publicações             | -                    |
+| GET    | `/api/Post/{id}`    | Retorna uma publicação por ID          | -                    |
+| POST   | `/api/Post`         | Cria uma nova publicação               | `{ idUser, author, username, content, date }` |
+| PUT    | `/api/Post/{id}`    | Atualiza uma publicação existente      | `{ id, idUser, author, username, content, date }` |
+| DELETE | `/api/Post/{id}`    | Remove uma publicação pelo ID          | -                    |
+
+---
+
+### 💡 Observações
+
+- Os endpoints usam convenção REST.
+- As rotas retornam `application/json`.
+- Em caso de erro, os códigos de status HTTP são utilizados para indicar falhas (`400`, `404`, etc.).
+- Todos os endpoints estão documentados e podem ser testados via Swagger (`/swagger`).
+
