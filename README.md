@@ -78,5 +78,5 @@ Abaixo estão listadas as principais rotas RESTful organizadas por entidade:
 - Os endpoints usam convenção REST.
 - As rotas retornam `application/json`.
 - Em caso de erro, os códigos de status HTTP são utilizados para indicar falhas (`400`, `404`, etc.).
-- Todos os endpoints estão documentados e podem ser testados via Swagger (`/swagger`).
+- Todos os endpoints estão documentados e podem ser testados via Swagger (`/`).
 
