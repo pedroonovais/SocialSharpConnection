@@ -80,3 +80,19 @@ Abaixo estão listadas as principais rotas RESTful organizadas por entidade:
 - Em caso de erro, os códigos de status HTTP são utilizados para indicar falhas (`400`, `404`, etc.).
 - Todos os endpoints estão documentados e podem ser testados via Swagger (`/`).
 
+### 🏁 Passos
+
+# Clone o repositório
+git clone https://github.com/pedroonovais/SocialSharpConnection/
+
+# Acesse a pasta do projeto
+cd .\api\
+
+# Restaure os pacotes
+dotnet restore
+
+# Aplique as migrations (caso ainda não aplicadas)
+dotnet ef database update --project ../data
+
+# Execute a aplicação
+dotnet run
